@@ -14,6 +14,12 @@ public class Main {
 		ivw.updateProduct(pt2);
 		
 		ivw.GetProducts();
+		retornar();
+	}
+	
+	
+	public static void retornar() {
+		System.out.println("sadas");
 	}
 
 }
