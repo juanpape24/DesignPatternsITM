@@ -10,13 +10,13 @@ public class ClaroPayment extends PublicService{
 
 	@Override
 	public void getDebt() {
-		System.out.println("\nChecking debit payment.");
+		System.out.println("\nChecking Claro debit payment.");
 		transaction.getPaymentAmount();
 	}
 
 	@Override
 	public void startPayment() {
-	    System.out.println("Init process payment.");
+	    System.out.println("Init Claro process payment.");
 	    transaction.processPay();
 	    transaction.getProofPayment();
 	}

@@ -11,20 +11,20 @@ public class AfiniaPayment extends PublicService{
 
 	@Override
 	public void getDebt() {
-	     System.out.println("Checking debit payment.");
+	     System.out.println("\nChecking Afinia debit payment.");
 		transaction.getPaymentAmount();
 	}
 
 	@Override
 	public void startPayment() {
-	    System.out.println("Init process payment.");
+	    System.out.println("Init Afinia process payment.");
 	    transaction.processPay();
 	    transaction.getProofPayment();
 	}
 
 	@Override
 	public void finishTrasaction() {
-	    System.out.println("transaction finished.");
+	    System.out.println("transaction finished.\n");
 	}
 
 }

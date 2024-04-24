@@ -1,17 +1,18 @@
 package BridgePattern;
-import BridgePattern.implementor.Afinia;
-import BridgePattern.implementor.Claro;
+import BridgePattern.implementor.Epayco;
+import BridgePattern.implementor.Pse;
 import BridgePattern.implementor.ITransaction;
 import BridgePattern.abstraction.*;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ITransaction claro = new Claro();
-		ITransaction afinia = new Afinia();
+		ITransaction pse = new Pse();
+		ITransaction ePayco = new Epayco();
 		
-		PublicService claroService = new ClaroPayment(claro);
-		PublicService afiniaService = new AfiniaPayment(afinia);
+		PublicService claroService = new ClaroPayment(pse);
+		PublicService afiniaService = new AfiniaPayment(ePayco);
+		PublicService claroService2 = new ClaroPayment(ePayco);
 
 		claroService.getDebt();
 		claroService.startPayment();
@@ -20,6 +21,10 @@ public class Main {
 		afiniaService.getDebt();
 		afiniaService.startPayment();
 		afiniaService.finishTrasaction();
+		
+		claroService2.getDebt();
+		claroService2.startPayment();
+		claroService2.finishTrasaction();
 	}
 
 }
