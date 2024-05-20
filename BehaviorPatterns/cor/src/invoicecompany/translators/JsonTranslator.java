@@ -3,7 +3,7 @@ package invoicecompany.translators;
 import invoicecompany.Document;
 import invoicecompany.Translator;
 
-public class CsvTranslator implements Translator {
+public class JsonTranslator implements Translator {
 
 	private Translator nextTranslator;
 
@@ -14,8 +14,8 @@ public class CsvTranslator implements Translator {
 
 	@Override
 	public void translate(Document document) {
-		if (document.equals(Document.CSV)) {
-			System.out.println("Translate CSV Document to XML DIAN finished.");
+		if (document.equals(Document.JSON)) {
+			System.out.println("Translate JSON Document to XML DIAN finished.");
 		} else {
 			nextTranslator.translate(document);
 		}
