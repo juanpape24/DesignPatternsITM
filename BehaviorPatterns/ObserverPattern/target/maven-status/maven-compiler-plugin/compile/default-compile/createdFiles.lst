@@ -1,0 +1,5 @@
+behavior\observerPattern\ObserverPattern.class
+behavior\observerPattern\EmailSubscriber.class
+behavior\observerPattern\ISubscriber.class
+behavior\observerPattern\MessageSubscriber.class
+behavior\observerPattern\Publisher.class
